@@ -1,0 +1,63 @@
+$white:#fff;
+$black:#000;
+
+body {
+    background: $white;
+    margin:0 auto;
+}
+
+.product-card-wrapper {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    margin:100px auto;
+    position: relative;
+    .card {
+        padding:20px;
+        &:hover {
+            .cart-btn {
+                opacity:8;
+            }
+            .card-img-top {
+                opacity: 0.4;
+            }
+        }
+        .card-img-top {
+            max-width: 230px;
+            margin:10px auto;
+        }
+        .card-title, .card-text {
+            color: $black;
+            line-height: 30px;
+            text-align: center;
+        }
+        .card-title {
+            margin:10px 0 0 0;
+        }
+        .card-text {
+            margin:0;
+        }
+        .rating-container .star {
+            max-width: 10px;
+            &:last-of-type {
+                max-width: 12px;
+            }
+        }
+        .cart-btn {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%);
+            opacity:0;
+        }
+        .rating-container {
+            display:flex;
+            justify-content: center;
+        }
+    }
+}
+
+// Notes
+// - I wouldn't normally make a title and p tag be the same font size but I did for this for the sake of sticking to design :)
+// - I know there is inline CSS through Bootstrap (eg. margin, padding, etc) but I haven't jumped on that train yet. I'm not a fan of using two different style methods! I always adapt to whatever the team / company uses though so no worries if your team does it - so will I :)
